@@ -1,7 +1,12 @@
 class Set:
+    """
+    Authors:
+    Timothy 
+    Obed
+    """
     def __init__(self):
         """
-        This instanciates the class
+        This instanciates the class.
         """
         self.values=[]
         
