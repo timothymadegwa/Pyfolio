@@ -27,9 +27,7 @@ class Set:
         """
         my_set=[]
         try:
-            for _ in values:
-                if _ not in my_set:
-                    my_set.append(_)
+            my_set=[_ for _ in values if _ not in my_set]
         except TypeError:
             my_set='Ensure that you enter an iterable object'
         return my_set
@@ -51,9 +49,7 @@ class Set:
             The the new list of unique values
         """
         try:
-            for _ in val:
-                if _ not in set1:
-                    set1.append(_)
+            set1=[_ for _ in val if _ not in set1]
         except TypeError:
             set1.append(val)
         return set1
@@ -77,9 +73,7 @@ class Set:
         solution_set=[]
         solution=set1+set2
         try:
-            for _ in solution:
-                if _ not in solution_set:
-                    solution_set.append(_)
+            solution_set=[_ for _ in solution if _ not in solution_set]
         except TypeError:
             solution_set='Ensure that you enter an iterable object'
         return solution_set
@@ -101,10 +95,7 @@ class Set:
         list
             A list containing the elements of the intersection of the two sets
         """
-        solution_set=[]
-        for _ in set1:
-            if _ in set2:
-                solution_set.append(_)
+        solution_set=[_ for _ in set1 if _ in set2]
         return solution_set
     
     def unique(self, set1,set2):
@@ -124,11 +115,5 @@ class Set:
         list
             A list containing the unique elements of the two sets
         """
-        solution_set=[]
-        for _ in set1:
-            if _ not in set2:
-                solution_set.append(_)
-        for _ in set2:
-            if _ not in set1:
-                solution_set.append(_)
+        solution_set=[_ for _ in set1 if _ not in set2].append([_ for _ in set2 if _ not in set1])
         return solution_set
