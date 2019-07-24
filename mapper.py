@@ -19,11 +19,9 @@ class Mapper:
         list:
             A list of the mapped values
         """
-        ans=[]
+
         try:
-            for x in iterable:
-                s=func(x)
-                ans.append(s)
+            ans=[func(x) for x in iterable]
         except TypeError:
             ans='Ensure that you enter an iterable object (list, tuple or str) of the right type with regards to the function used'
         return ans
