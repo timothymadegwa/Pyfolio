@@ -4,6 +4,7 @@ class Mapper:
         
     def map(self, func, iterable):
         """
+        O(N)
         This method maps a given function using the values of an iterable
 
         Parameters
