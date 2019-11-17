@@ -10,3 +10,4 @@ class GameOfLife:
         self.z1, self.z2=three
         self.game[self.x1][self.x2], self.game[self.y1][self.y2], self.game[self.z1][self.z2] = 1,1,1
         return self.game
+        
